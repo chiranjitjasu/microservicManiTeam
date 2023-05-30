@@ -11,11 +11,13 @@ pool:
   demands:
   - agent.name -equals microserviceLearnVm1
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+jobs:
+- job: job1
+  steps:
+  - script: echo Hello, world!
+    displayName: 'Run a one-line script'
+- job: job2
+  steps:
+  - script: echo Hello1, world!
+    displayName: 'Run a one-line scrip1t'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
