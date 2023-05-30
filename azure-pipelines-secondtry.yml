@@ -7,7 +7,9 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: default
+  demands:
+   - agent.name -equals microserviceLearnVm1
 
 steps:
 - script: echo Hello, world!
